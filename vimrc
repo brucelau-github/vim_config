@@ -97,12 +97,16 @@ colorscheme delek
 
 set number
 
+set colorcolumn=80 " red line and over is error
+set textwidth=0
+
 set autoindent " automatically set indent of new line
 set smartindent
 "here we highlight trailing white space and black line with none words
 match ErrorMsg '\s\+$'
 " remove trailing whitespace
 nnoremap <Leader>rtw :%s/\s\+$//e<CR>
+
 
 "set laststatus=2 " show the satus line all the time
 

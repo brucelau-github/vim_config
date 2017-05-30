@@ -36,7 +36,7 @@ Check out the [presentation PDF](vim-workshop.pdf).
 
 	" let vundle manage vundle
 	Plugin 'gmarik/vundle'
-	
+
 	" list all plugins that you'd like to install here
 	Plugin 'kien/ctrlp.vim' " fuzzy find files
 	Plugin 'scrooloose/nerdtree' " file drawer, open with :NERDTreeToggle
@@ -61,7 +61,7 @@ Check out the [presentation PDF](vim-workshop.pdf).
 	<c-k> move windows down
 	<c-h> move windows left
 	<c-l> move windows right
-	
+
 	buffers
 	:bun/:bd/:bw to close the window as well (vim command), or
 	:BUN/:BD/:BW to leave the window(s) intact (this script).

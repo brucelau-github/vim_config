@@ -68,3 +68,4 @@ Check out the [presentation PDF](vim-workshop.pdf).
 3. wget
 
 	wget -O ~/.vimrc https://raw.githubusercontent.com/brucelau-github/vim-configuration/master/vimrc
+Note in Vim version 8.0, there is a native package manager (:help package more info).

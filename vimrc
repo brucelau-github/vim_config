@@ -104,6 +104,10 @@ match ErrorMsg '\s\+$'
 " remove trailing whitespace short for trim white space
 nnoremap <Leader>tr :%s/\s\+$//e<CR>
 
+" map ,np to bn bp to switch buffer
+nnoremap <Leader>bn :bn<CR>
+nnoremap <Leader>bp :bp<CR>
+
 "set laststatus=2 " show the satus line all the time
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""

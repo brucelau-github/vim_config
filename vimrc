@@ -108,7 +108,7 @@ nnoremap <Leader>tr :%s/\s\+$//e<CR>
 nnoremap <Leader>bn :bn<CR>
 nnoremap <Leader>bp :bp<CR>
 
-"set laststatus=2 " show the satus line all the time
+set laststatus=2 " show the satus line all the time
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Mappings

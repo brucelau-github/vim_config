@@ -67,5 +67,5 @@ Check out the [presentation PDF](vim-workshop.pdf).
 	:BUN/:BD/:BW to leave the window(s) intact (this script).
 3. wget
 
-	wget -O ~/.vimrc https://raw.githubusercontent.com/brucelau-github/vim-configuration/master/vimrc
+	wget -O ~/.vimrc https://raw.githubusercontent.com/brucelau-github/vim_config/master/vimrc
 Note in Vim version 8.0, there is a native package manager (:help package more info).

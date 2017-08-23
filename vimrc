@@ -32,7 +32,7 @@ set autoread " detect when a file is changed
 set ruler " show thepostion of the course
 set showcmd "show the cmd that you typed
 set showmode "show current model
-set history=2000 "the capacity of command histroy 
+set history=2000 "the capacity of command histroy
 set nowrap "set the line text nowrap
 
 "set default encoding , here to solve the set listchar errors
@@ -109,8 +109,8 @@ nnoremap <Leader>bn :bn<CR>
 nnoremap <Leader>bp :bp<CR>
 
 set laststatus=2 " show the satus line all the time
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set statusline+=%f " show file name in statusline
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Mappings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 

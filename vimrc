@@ -65,9 +65,9 @@ set clipboard=unnamedplus "for x-windows linux system
 set ttyfast
 
 " code folding settings
-set foldmethod=syntax " fold based on indent
+set foldmethod=indent " fold based on indent
 set foldnestmax=10 " deepest fold is 10 levels
-set nofoldenable " don't fold by default
+set foldenable "fold by default
 set foldlevel=1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""

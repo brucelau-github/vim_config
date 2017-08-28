@@ -110,6 +110,7 @@ nnoremap <Leader>bp :bp<CR>
 
 set laststatus=2 " show the satus line all the time
 set statusline+=%f " show file name in statusline
+set statusline+=%(\ (%1l,%1c)%) " show cursor`s postion in statusline
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Mappings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""

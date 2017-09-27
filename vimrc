@@ -105,6 +105,8 @@ match ErrorMsg '\s\+$'
 match ErrorMsg '\%>79v.\+'
 " remove trailing whitespace short for trim white space
 nnoremap <Leader>tr :%s/\s\+$//e<CR>
+" autocmd clean tailing whitespace
+autocmd BufWritePre,BufRead * %s/\s\+$//e
 
 " map ,np to bn bp to switch buffer
 nnoremap <Leader>bn :bn<CR>

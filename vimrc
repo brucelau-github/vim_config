@@ -120,6 +120,8 @@ set statusline+=%(\ (%1l,%1c)%) " show cursor`s postion in statusline
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 set pastetoggle=<F2> "switch of indent temperily
+" press f3 to cancel hightlight search
+map <F3> :nohls<cr>
 
 map <leader>ev :e! ~/.vimrc<cr> " edit ~/.vimrc
 

@@ -138,6 +138,12 @@ nnoremap <silent> k gk
 nmap \t :set ts=4 sts=4 sw=4 noet<cr>
 nmap \s :set ts=4 sts=4 sw=4 et<cr>
 
+" pair completion
+inoremap {<tab> {}<Left>
+inoremap (<tab> ()<Left>
+inoremap '<tab> ''<Left>
+inoremap "<tab> ""<Left>
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Functions
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""

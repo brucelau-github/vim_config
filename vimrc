@@ -178,7 +178,7 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 " syntastic using python3 to check
-let g:syntastic_python_exec = ['python3', 'pylint', 'pep8']
+let g:syntastic_python_checkers = ['python3', 'pylint', 'pep8']
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1

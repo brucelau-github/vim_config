@@ -33,7 +33,8 @@ set ruler " show thepostion of the course
 set showcmd "show the cmd that you typed
 set showmode "show current model
 set history=2000 "the capacity of command histroy
-set nowrap "set the line text nowrap
+set wrap "set the line text nowrap
+set textwidth=79 "set the line text nowrap
 
 "set default encoding , here to solve the set listchar errors
 scriptencoding utf-8
@@ -177,7 +178,7 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 " syntastic using python3 to check
-let g:syntastic_python_python_exec = 'python3'
+let g:syntastic_python_exec = ['python3', 'pylint', 'pep8']
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1

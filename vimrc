@@ -123,6 +123,10 @@ set statusline+=%(\ (%1l,%1c)%) " show cursor`s postion in statusline
 set pastetoggle=<F2> "switch of indent temperily
 " press f3 to cancel hightlight search
 map <F3> :nohls<cr>
+map <F5> :SyntasticCheck<cr>
+map <F6> :lnext<cr>
+map <F7> :lprevious<cr>
+map <F8> :SyntasticReset<cr>
 
 map <leader>ev :e! ~/.vimrc<cr> " edit ~/.vimrc
 
@@ -191,8 +195,8 @@ let g:syntastic_python_pep8_exec = "pep8"
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_wq = 1
 " the error window will be automatically opened when errors are detected, and closed when none are detected.
 let g:syntastic_auto_loc_list = 1
 " syntastic settings end

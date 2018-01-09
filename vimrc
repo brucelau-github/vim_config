@@ -19,9 +19,6 @@ Plugin 'vim-syntastic/syntastic' "syntastic checkers
 " colorschemes
 Plugin 'chriskempson/base16-vim'
 
-" JavaScript plugins
-Plugin 'pangloss/vim-javascript'
-Plugin 'jelera/vim-javascript-syntax'
 
 call vundle#end()
 filetype plugin indent on
@@ -33,8 +30,8 @@ set ruler " show thepostion of the course
 set showcmd "show the cmd that you typed
 set showmode "show current model
 set history=2000 "the capacity of command histroy
-set wrap "set the line text nowrap
-set textwidth=79 "set the line text nowrap
+"set wrap "set the line text nowrap
+"set textwidth=79 "set the line text nowrap
 
 "set default encoding , here to solve the set listchar errors
 scriptencoding utf-8
@@ -103,7 +100,7 @@ set smartindent
 "here we highlight trailing white space and black line with none words
 match ErrorMsg '\s\+$'
 " here we highlight long line over 79 colums
-match ErrorMsg '\%>79v.\+'
+"match ErrorMsg '\%>79v.\+'
 " remove trailing whitespace short for trim white space
 nnoremap <Leader>tr :%s/\s\+$//e<CR>
 " autocmd clean tailing whitespace
@@ -181,14 +178,14 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
-" syntastic using python3 to check
-let g:syntastic_python_checkers = ["python3", "pylint", "pep8"]
+" syntastic using checkers to check
+let g:syntastic_go_checkers = ["golint"]
+let g:syntastic_python_checkers = ["python3", "pylint"]
 "g:syntastic_<filetype>_<checker>_exec
-let g:syntastic_python_python3_exec = "python3"
+let g:syntastic_go_golint_exec = "golint"
 let g:syntastic_python_python_exec = "python3"
-let g:syntastic_python_pylint = "pylint"
-let g:syntastic_python_pep8_exec = "pep8"
-"syntastic_<filetype>_<checker>_<option>
+let g:syntastic_python_python3_exec = "python3"
+let g:syntastic_python_pylint_exec = "pylint"
 "The result is a command line of the form:
 "   <exe> <args> <fname> <post_args> <tail>
 "let g:syntastic_c_pc_lint_args = '-w5 -Iz:/usr/include/linux'
@@ -200,28 +197,3 @@ let g:syntastic_check_on_wq = 1
 " the error window will be automatically opened when errors are detected, and closed when none are detected.
 let g:syntastic_auto_loc_list = 1
 " syntastic settings end
-
-" close NERDTree after a file is opened
-"let g:NERDTreeQuitOnOpen=0
-" show hidden files in NERDTree
-"let NERDTreeShowHidden=1
-" Toggle NERDTree
-"nmap <silent> <leader>k :NERDTreeToggle<cr>
-" expand to the path of the file in the current buffer
-"nmap <silent> <leader>y :NERDTreeFind<cr>
-
-" map fuzzyfinder (CtrlP) plugin
-" nmap <silent> <leader>t :CtrlP<cr>
-"nmap <silent> <leader>r :CtrlPBuffer<cr>
-"let g:ctrlp_map='<leader>t'
-"let g:ctrlp_dotfiles=1
-"let g:ctrlp_working_path_mode = 'ra'
-
-" CtrlP ignore patterns
-"let g:ctrlp_custom_ignore = {
-            "\ 'dir': '\.git$\|node_modules$\|\.hg$\|\.svn$',
-            "\ 'file': '\.exe$\|\.so$'
-            "\ }
-
-" search the nearest ancestor that contains .git, .hg, .svn
-"let g:ctrlp_working_path_mode = 2

@@ -18,6 +18,8 @@ Plugin 'tpope/vim-commentary' " comment/uncomment lines with gcc or gc in visual
 Plugin 'vim-syntastic/syntastic' "syntastic checkers
 " colorschemes
 Plugin 'chriskempson/base16-vim'
+" vim-go
+Plugin 'fatih/vim-go'
 
 
 call vundle#end()

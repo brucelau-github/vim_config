@@ -199,3 +199,11 @@ let g:syntastic_check_on_wq = 1
 " the error window will be automatically opened when errors are detected, and closed when none are detected.
 let g:syntastic_auto_loc_list = 1
 " syntastic settings end
+"
+" vim-go setting
+let g:go_fmt_autosave = 1
+let g:go_fmt_command = "goimports"
+let g:go_fmt_options = {'gofmt': '-s', 'goimports': '-w', }
+let g:go_metalinter_autosave = 1
+let g:go_metalinter_autosave_enabled = ['vet', 'golint']
+

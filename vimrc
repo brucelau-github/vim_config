@@ -20,7 +20,8 @@ Plugin 'vim-syntastic/syntastic' "syntastic checkers
 Plugin 'chriskempson/base16-vim'
 " vim-go
 Plugin 'fatih/vim-go'
-
+" taglist
+Plugin 'vim-scripts/taglist.vim'
 
 call vundle#end()
 filetype plugin indent on

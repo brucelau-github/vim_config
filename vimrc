@@ -98,7 +98,6 @@ colorscheme delek
 set number
 
 set autoindent " automatically set indent of new line
-set smartindent
 "here we highlight trailing white space and black line with none words
 match ErrorMsg '\s\+$'
 " here we highlight long line over 79 colums

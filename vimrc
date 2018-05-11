@@ -64,6 +64,8 @@ set clipboard=unnamedplus "for x-windows linux system
 
 " faster redrawing
 set ttyfast
+" mouse support when click
+set mouse=a
 
 " code folding settings
 set foldmethod=indent " fold based on indent

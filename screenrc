@@ -1,0 +1,9 @@
+# Mouse scrolling and elevators will work #
+# if you enable them in your .screenrc
+termcapinfo xterm* ti@:te@
+
+# Color is enable
+termcap  xterm 'AF=\E[3%dm:AB=\E[4%dm'
+terminfo xterm 'AF=\E[3%p1%dm:AB=\E[4%p1%dm'
+# enable mouse support
+mousetrack on

@@ -20,6 +20,10 @@ Plugin 'vim-syntastic/syntastic' "syntastic checkers
 Plugin 'chriskempson/base16-vim'
 " vim-go
 Plugin 'fatih/vim-go'
+" go sinnpet
+Plugin 'SirVer/ultisnips'
+" Full path fuzzy file, buffer, mru, tag, ... finder for Vim.
+Plugin 'ctrlpvim/ctrlp.vim'
 " taglist
 Plugin 'vim-scripts/taglist.vim'
 
@@ -206,7 +210,15 @@ let g:syntastic_auto_loc_list = 1
 let g:go_fmt_autosave = 1
 let g:go_fmt_command = "goimports"
 let g:go_fmt_options = {'gofmt': '-s', 'goimports': '-w', }
+" metalinter
 let g:go_metalinter_autosave = 1
-let g:go_metalinter_autosave_enabled = ['vet', 'golint']
+let g:go_metalinter_enabled = ['vet', 'golint', 'errcheck']
+let g:go_metalinter_deadline = "5s"
 let g:go_guru_scope = ["/home/brucelau/apps/go/src/...", "..."]
+"You can add some shortcuts to make it easier to jump between errors in quickfix list:
+map <C-n> :cnext<CR>
+map <C-m> :cprevious<CR>
+nnoremap <leader>a :cclose<CR>
+let g:go_list_type = "quickfix"
+let g:go_addtags_transform = "camelcase"
 

@@ -148,20 +148,20 @@ nnoremap <silent> k gk
 nmap \t :set ts=4 sts=4 sw=4 noet<cr>
 nmap \s :set ts=4 sts=4 sw=4 et<cr>
 
-" pair completion
-inoremap {<tab> {}<Left>
-inoremap (<tab> ()<Left>
-inoremap '<tab> ''<Left>
-inoremap "<tab> ""<Left>
+" ultisnip to complete
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+let g:UltiSnipsEditSplit="vertical"
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Functions
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-map <C-h> :call WinMove('h')<cr>
-map <C-j> :call WinMove('j')<cr>
-map <C-k> :call WinMove('k')<cr>
-map <C-l> :call WinMove('l')<cr>
+map <leader>wh :call WinMove('h')<cr>
+map <leader>wj :call WinMove('j')<cr>
+map <leader>wk :call WinMove('k')<cr>
+map <leader>wl :call WinMove('l')<cr>
 
 " Window movement shortcuts
 " move to the window in the direction shown, or create a new window

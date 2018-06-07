@@ -215,7 +215,7 @@ let g:go_fmt_options = {'gofmt': '-s', 'goimports': '-w', }
 let g:go_metalinter_autosave = 1
 let g:go_metalinter_enabled = ['vet', 'golint', 'errcheck']
 let g:go_metalinter_deadline = "5s"
-let g:go_guru_scope = ["/home/brucelau/apps/go/src/...", "..."]
+let g:go_guru_scope = ["~/apps/go/src/...", "..."]
 "You can add some shortcuts to make it easier to jump between errors in quickfix list:
 map <C-n> :cnext<CR>
 map <C-m> :cprevious<CR>

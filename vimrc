@@ -10,8 +10,6 @@ call vundle#begin()
 " let vundle manage vundle
 Plugin 'gmarik/vundle'
 
-" utilities
-Plugin 'vim-scripts/bufkill.vim' " close buffers without closing windows
 "Plugin 'scrooloose/nerdtree' " file drawer, open with :NERDTreeToggle
 Plugin 'tpope/vim-fugitive' " the ultimate git helper
 Plugin 'tpope/vim-commentary' " comment/uncomment lines with gcc or gc in visual mode
@@ -22,12 +20,9 @@ Plugin 'chriskempson/base16-vim'
 Plugin 'fatih/vim-go'
 " go sinnpet
 Plugin 'SirVer/ultisnips'
-" Full path fuzzy file, buffer, mru, tag, ... finder for Vim.
-Plugin 'ctrlpvim/ctrlp.vim'
-" taglist
-Plugin 'vim-scripts/taglist.vim'
 
 call vundle#end()
+
 filetype plugin indent on
 
 "basic setting
@@ -75,7 +70,7 @@ set mouse=a
 set foldmethod=indent " fold based on indent
 set foldnestmax=10 " deepest fold is 10 levels
 set foldenable "fold by default
-set foldlevel=1
+set foldlevel=0
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => User Interface
@@ -135,8 +130,6 @@ map <F8> :SyntasticReset<cr>
 
 map <leader>ev :e! ~/.vimrc<cr> " edit ~/.vimrc
 
-map <leader>wc :wincmd q<cr>
-
 " escapte to normal model from insert mode by press ,,
 vmap ,, <esc>
 map! ,, <esc>
@@ -159,6 +152,7 @@ let g:UltiSnipsSnippetDirectories=["UltiSnips"]
 " => Functions
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+map <leader>wc :wincmd q<cr>
 map <leader>wh :call WinMove('h')<cr>
 map <leader>wj :call WinMove('j')<cr>
 map <leader>wk :call WinMove('k')<cr>
@@ -188,10 +182,8 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 " syntastic using checkers to check
-let g:syntastic_go_checkers = ["golint"]
 let g:syntastic_python_checkers = ["python3", "pylint"]
 "g:syntastic_<filetype>_<checker>_exec
-let g:syntastic_go_golint_exec = "golint"
 let g:syntastic_python_python_exec = "python3"
 let g:syntastic_python_python3_exec = "python3"
 let g:syntastic_python_pylint_exec = "pylint"
@@ -215,11 +207,11 @@ let g:go_fmt_options = {'gofmt': '-s', 'goimports': '-w', }
 let g:go_metalinter_autosave = 1
 let g:go_metalinter_enabled = ['vet', 'golint', 'errcheck']
 let g:go_metalinter_deadline = "5s"
-let g:go_guru_scope = ["~/apps/go/src/...", "..."]
+let g:go_guru_scope = ["$GOPATH/src/..", "$GOROOT/src/..."]
 "You can add some shortcuts to make it easier to jump between errors in quickfix list:
 map <C-n> :cnext<CR>
 map <C-m> :cprevious<CR>
-nnoremap <leader>a :cclose<CR>
+nnoremap <leader>fc :cclose<CR>
 let g:go_list_type = "quickfix"
 let g:go_addtags_transform = "camelcase"
 

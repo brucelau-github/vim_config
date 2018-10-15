@@ -20,6 +20,8 @@ Plugin 'chriskempson/base16-vim'
 Plugin 'fatih/vim-go'
 " go sinnpet
 Plugin 'SirVer/ultisnips'
+" robot framework syntax
+Plugin 'mfukar/robotframework-vim'
 
 call vundle#end()
 
@@ -108,6 +110,8 @@ match ErrorMsg '\s\+$'
 nnoremap <Leader>tr :%s/\s\+$//e<CR>
 " autocmd clean tailing whitespace
 autocmd BufWritePre * %s/\s\+$//e
+" robot filetype insert 4 space for tab key
+autocmd Filetype robot setlocal expandtab
 
 " map ,np to bn bp to switch buffer
 nnoremap <Leader>bn :bn<CR>

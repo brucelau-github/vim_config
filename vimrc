@@ -66,13 +66,13 @@ set clipboard=unnamedplus "for x-windows linux system
 " faster redrawing
 set ttyfast
 " mouse support when click
-set mouse=a
+"set mouse=a
 
 " code folding settings
 set foldmethod=indent " fold based on indent
 set foldnestmax=10 " deepest fold is 10 levels
 set foldenable "fold by default
-set foldlevel=0
+set foldlevel=1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => User Interface
@@ -109,7 +109,7 @@ match ErrorMsg '\s\+$'
 " remove trailing whitespace short for trim white space
 nnoremap <Leader>tr :%s/\s\+$//e<CR>
 " autocmd clean tailing whitespace
-autocmd BufWritePre * %s/\s\+$//e
+"autocmd BufWritePre * %s/\s\+$//e
 " robot filetype insert 4 space for tab key
 autocmd Filetype robot setlocal expandtab
 
@@ -218,4 +218,3 @@ map <C-m> :cprevious<CR>
 nnoremap <leader>fc :cclose<CR>
 let g:go_list_type = "quickfix"
 let g:go_addtags_transform = "camelcase"
-

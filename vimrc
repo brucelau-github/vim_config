@@ -102,6 +102,15 @@ set background=dark
 colorscheme delek
 
 set number
+" set relative number so I don't have to count line numbers
+set relativenumber
+
+" retain the cancellation history
+set undofile
+
+set backupdir=~/.vim/.backup//
+set directory=~/.vim/.swp//
+set undodir=~/.vim/.undo//
 
 set autoindent " automatically set indent of new line
 "here we highlight trailing white space and black line with none words

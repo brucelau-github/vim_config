@@ -104,6 +104,7 @@ colorscheme delek
 set number
 " set relative number so I don't have to count line numbers
 set relativenumber
+set cursorline
 
 " retain the cancellation history
 set undofile

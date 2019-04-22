@@ -87,6 +87,9 @@ set hlsearch
 set incsearch " set incremental search, like modern browsers
 set nolazyredraw " don't redraw while executing macros
 
+" change \r\n to \n
+set ff=unix
+
 set magic " Set magic on, for regex
 
 set showmatch " show matching braces
@@ -221,8 +224,8 @@ let g:go_fmt_command = "goimports"
 let g:go_fmt_options = {'gofmt': '-s', 'goimports': '-w', }
 " metalinter
 let g:go_metalinter_autosave = 1
-let g:go_metalinter_enabled = ['vet', 'golint', 'errcheck']
-let g:go_metalinter_deadline = "5s"
+let g:go_metalinter_enabled = ['vet', 'golint']
+let g:go_metalinter_deadline = "10s"
 let g:go_guru_scope = ["$GOPATH/src/..", "$GOROOT/src/..."]
 "You can add some shortcuts to make it easier to jump between errors in quickfix list:
 map <C-n> :cnext<CR>

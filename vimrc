@@ -15,7 +15,7 @@ Plugin 'tpope/vim-fugitive' " the ultimate git helper
 Plugin 'tpope/vim-commentary' " comment/uncomment lines with gcc or gc in visual mode
 Plugin 'vim-syntastic/syntastic' "syntastic checkers
 " colorschemes
-Plugin 'chriskempson/base16-vim'
+Plugin 'morhetz/gruvbox'
 " vim-go
 Plugin 'fatih/vim-go'
 " go sinnpet
@@ -102,7 +102,7 @@ set encoding=utf8
 let base16colorspace=256  " Access colors present in 256 colorspace"
 set t_Co=256 " Explicitly tell vim that the terminal supports 256 colors"
 set background=dark
-colorscheme base16-google-dark
+colorscheme gruvbox
 
 set number
 " set relative number so I don't have to count line numbers

@@ -286,3 +286,9 @@ let g:prettier#config#config_precedence = 'prefer-file'
 
 " always|never|preserve
 let g:prettier#config#prose_wrap = 'preserve'
+
+" Number toggle
+augroup numbertoggle
+  autocmd BufEnter,FocusGained,InsertLeave,WinEnter * if &nu | set rnu   | endif
+  autocmd BufLeave,FocusLost,InsertEnter,WinLeave   * if &nu | set nornu | endif
+augroup END

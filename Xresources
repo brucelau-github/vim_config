@@ -66,7 +66,8 @@ XTerm.vt100.translations: #override \n\
   Ctrl Shift <Key>V: insert-selection(CLIPBOARD) \n\
   Shift <Btn1Up>: exec-formatted("xdg-open '%t'", PRIMARY) \n\
   <Btn1Up>: select-end(PRIMARY, CLIPBOARD, CUT_BUFFER0) \n\
-  <Btn2Up>: insert-selection(PRIMARY)
+  <Btn2Up>: insert-selection(PRIMARY) \n\
+  <Key> F11: fullscreen()
 
 ! enable copy/paste hotkey to work (shift+insert = paste ; mouse highlight = copy)
 XTerm*selectToClipboard: true

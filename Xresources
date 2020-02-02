@@ -1,11 +1,5 @@
-! some time it wont show color correct. possible reasons are:
-! /etc/X11/app-defaults/XTerm contains some default settiong,
-! which won't be overwrited. Xserver by default will merge xrdb file.
-! This leads to some confusing.
-! Solution A:
-! replace Xterm file contents with this.
-! Solution B:
-! remot all files under app-defaults.
+! /etc/X11/app-defaults/XTerm-color
+! comment out any lines starting with vt100 color?
 ! run to reload xrdb -load ~/.Xresources
 
 #define WINDOWGEOMETRY 90x30

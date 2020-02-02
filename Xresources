@@ -5,8 +5,9 @@
 #define WINDOWGEOMETRY 90x30
 ! xterm configuration
 xterm*termName: xterm-256color
-xterm*faceName: terminus
+xterm*faceName: Monaco
 XTerm*faceSize: 12
+XTerm*allowBoldFonts: false
 xterm*dynamiccolors:      true
 xterm*utf8:               2
 xterm*geometry:           WINDOWGEOMETRY
@@ -137,3 +138,39 @@ XTerm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
 *color19:      base02
 *color20:      base04
 *color21:      base06
+
+! xterm colors
+xterm.vt100.foreground:   base05
+#ifdef background_opacity
+xterm.vt100.background:   [background_opacity]base00
+#else
+xterm.vt100.background:   base00
+#endif
+xterm.vt100.cursorColor:  base05
+
+xterm.vt100.color0:       base00
+xterm.vt100.color1:       base08
+xterm.vt100.color2:       base0B
+xterm.vt100.color3:       base0A
+xterm.vt100.color4:       base0D
+xterm.vt100.color5:       base0E
+xterm.vt100.color6:       base0C
+xterm.vt100.color7:       base05
+
+xterm.vt100.color8:       base03
+xterm.vt100.color9:       base08
+xterm.vt100.color10:      base0B
+xterm.vt100.color11:      base0A
+xterm.vt100.color12:      base0D
+xterm.vt100.color13:      base0E
+xterm.vt100.color14:      base0C
+xterm.vt100.color15:      base07
+
+! Note: colors beyond 15 might not be loaded (e.g., xterm, urxvt),
+! use 'shell' template to set these if necessary
+xterm.vt100.color16:      base09
+xterm.vt100.color17:      base0F
+xterm.vt100.color18:      base01
+xterm.vt100.color19:      base02
+xterm.vt100.color20:      base04
+xterm.vt100.color21:      base06

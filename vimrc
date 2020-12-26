@@ -15,7 +15,8 @@ Plugin 'tpope/vim-fugitive' " the ultimate git helper
 Plugin 'tpope/vim-commentary' " comment/uncomment lines with gcc or gc in visual mode
 Plugin 'vim-syntastic/syntastic' "syntastic checkers
 " colorschemes
-Plugin 'rafi/awesome-vim-colorschemes'
+Plugin 'chriskempson/base16-vim'
+
 " vim-go
 Plugin 'fatih/vim-go'
 " go sinnpet

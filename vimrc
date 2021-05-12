@@ -9,6 +9,7 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#begin()
 " let vundle manage vundle
 Plugin 'gmarik/vundle'
+Plugin 'codota/tabnine-vim'
 
 "Plugin 'scrooloose/nerdtree' " file drawer, open with :NERDTreeToggle
 Plugin 'tpope/vim-fugitive' " the ultimate git helper

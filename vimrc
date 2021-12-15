@@ -38,6 +38,12 @@ set ruler " show thepostion of the course
 set showcmd "show the cmd that you typed
 set showmode "show current model
 set history=2000 "the capacity of command histroy
+
+" search down into subdirectory
+set path+=**
+
+" Display all matching files when we tab complete
+set wildmenu
 "set wrap "set the line text nowrap
 "set textwidth=79 "set the line text nowrap
 
@@ -77,6 +83,14 @@ set foldmethod=indent " fold based on indent
 set foldnestmax=10 " deepest fold is 10 levels
 set foldenable "fold by default
 set foldlevel=1
+
+" Tweaks for browsing
+let g:netrw_banner=0        " disable annoying banner
+let g:netrw_browse_split=4  " open in prior window
+let g:netrw_altv=1          " open splits to the right
+let g:netrw_liststyle=3     " tree view
+let g:netrw_list_hide=netrw_gitignore#Hide()
+let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => User Interface
